@@ -1,0 +1,12 @@
+knot:
+  image: mqsoh/knot
+  volumes:
+    - .:/workdir
+  command: watch README.md development.md
+brunch:
+  build: .
+  volumes:
+    - .:/workdir
+  ports:
+    - "3333:3333"
+    - "9485:9485"
